@@ -15,8 +15,8 @@ void StudentManager::deleteStudent(int id) {
     /* TODO */
     int idx = findStudentByID(id);
     if (idx >= 0) {
-        for(int i = idx; i < num_of_students; i++){
-            students[i] = students[i+1];
+        for(int i = idx+1; i < num_of_students; i++){
+            students[i-1] = students[i];
         }
         num_of_students--;
     }
